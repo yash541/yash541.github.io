@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Yashwanth Reddy Avula">
+<meta property="og:description" content="Software engineer building event-driven systems and production AI. Founder of ApplyFlow AI.">
+<meta property="og:image" content="https://yash541.github.io/assets/yashwanth.jpg">
+<link rel="icon" href="assets/yashwanth.jpg">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>Yashwanth Reddy Avula</title>
+<meta name="description" content="Walk through the house of Yashwanth Reddy Avula: software engineer and founder of ApplyFlow AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the page is a house walked top to bottom. Each section is a room (own wall colour, wooden floor and a doormat to the next room); a blueprint floor plan on the right tracks where you are. */
+:root {
+  --ink: #1C2333;
+  --muted: #586174;
+  --line: rgba(28,35,51,.14);
+  --paper: #FFFFFF;
+  --brass: #B8862F;
+  --brass-ink: #855E14;
+  --brass-soft: rgba(184,134,47,.16);
+  --door: #1F5A57;
+  --door-dark: #17443F;
+  --sky: #D6E6F2;
+  --facade: #CCD5DE;
+  --siding: rgba(28,35,51,.06);
+  --wall-hall: #EEF0E9;
+  --wall-study: #E4EAF2;
+  --wall-shop: #E7E6E2;
+  --peg: rgba(28,35,51,.13);
+  --wall-lib: #E2EBE3;
+  --wall-trophy: #F2E9E6;
+  --wood: #B88A5E;
+  --wood-dark: #9C7148;
+  --plank: rgba(0,0,0,.08);
+  --base: #FFFFFF;
+  --shelf: #8B5E3C;
+  --b1: #2F5D50; --b2: #8C3B3B; --b3: #2E4A7A; --b4: #B8862F; --b5: #5B4B7A; --b6: #3E6B7E;
+  --glow: rgba(255,214,140,.38);
+  --font-display: "Young Serif", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #ECEEF3; --muted: #A6ADBB; --line: rgba(236,238,243,.14); --paper: #1E2433;
+    --brass: #D9A54A; --brass-ink: #E6BC6C; --brass-soft: rgba(217,165,74,.16);
+    --door: #1F5A57; --door-dark: #143A36;
+    --sky: #0D1426; --facade: #1A2230; --siding: rgba(255,255,255,.03);
+    --wall-hall: #171C1A; --wall-study: #131924; --wall-shop: #1A1B1D; --peg: rgba(255,255,255,.07);
+    --wall-lib: #121D17; --wall-trophy: #201819;
+    --wood: #5A402B; --wood-dark: #47321F; --plank: rgba(0,0,0,.25); --base: #2A303D; --shelf: #6B4A30;
+    --glow: rgba(255,196,110,.20);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #ECEEF3; --muted: #A6ADBB; --line: rgba(236,238,243,.14); --paper: #1E2433;
+  --brass: #D9A54A; --brass-ink: #E6BC6C; --brass-soft: rgba(217,165,74,.16);
+  --door: #1F5A57; --door-dark: #143A36;
+  --sky: #0D1426; --facade: #1A2230; --siding: rgba(255,255,255,.03);
+  --wall-hall: #171C1A; --wall-study: #131924; --wall-shop: #1A1B1D; --peg: rgba(255,255,255,.07);
+  --wall-lib: #121D17; --wall-trophy: #201819;
+  --wood: #5A402B; --wood-dark: #47321F; --plank: rgba(0,0,0,.25); --base: #2A303D; --shelf: #6B4A30;
+  --glow: rgba(255,196,110,.20);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--wall-hall); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--sky); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+.wrap {
+  position: relative; z-index: 1; max-width: 1040px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 1180px) { .wrap { margin-left: max(24px, calc((100vw - 1040px - 200px) / 2)); } }
+.mono { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .03em; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(32px, 4.6vw, 48px); line-height: 1.05; letter-spacing: -.01em; }
+h3 { font-size: 21px; line-height: 1.25; }
+
+/* ---------- Room shell ---------- */
+.room { position: relative; overflow: hidden; }
+.room::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse 60% 45% at 50% 0%, var(--glow), transparent 70%);
+  opacity: 0; transition: opacity 1.4s ease;
+}
+.room.lit::after { opacity: 1; }
+.room-body { padding-block: 84px 56px; }
+.sign { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--brass-ink); }
+.sign .plate { padding: 4px 10px; border: 1px solid var(--brass); border-radius: 4px; background: var(--brass-soft); }
+.room-head { margin-bottom: 40px; display: grid; gap: 8px; }
+.room-head p { margin: 0; color: var(--muted); font-size: 17px; max-width: 56ch; }
+
+/* Floor + doormat */
+.floor {
+  position: relative; z-index: 1; height: 88px;
+  background:
+    linear-gradient(var(--base), var(--base)) top / 100% 10px no-repeat,
+    linear-gradient(rgba(0,0,0,.12), transparent) 0 10px / 100% 8px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 158px, var(--plank) 158px 160px),
+    repeating-linear-gradient(0deg, var(--wood) 0 26px, var(--wood-dark) 26px 27px);
+  display: flex; align-items: center; justify-content: center; padding-top: 10px;
+}
+.mat {
+  display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 10px 22px; border-radius: 8px;
+  background: repeating-linear-gradient(90deg, #5C4632 0 3px, #4E3B2A 3px 6px);
+  color: #F3E6D2; border: 2px dashed rgba(243,230,210,.35);
+  box-shadow: 0 4px 10px rgba(0,0,0,.2); transition: transform .15s ease;
+}
+.mat:hover { transform: translateY(-2px); }
+.mat .mono { font-size: 12px; }
+
+/* ---------- 1. Porch ---------- */
+#porch {
+  background:
+    linear-gradient(var(--sky), var(--sky)) top / 100% 70px no-repeat,
+    repeating-linear-gradient(180deg, var(--facade) 0 22px, var(--siding) 22px 24px),
+    var(--facade);
+}
+#porch::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 70px; height: 14px; z-index: 0;
+  background: var(--door-dark); opacity: .5;
+}
+.porch-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: end; padding-block: 112px 0; }
+.porch-text { min-width: 0; padding-bottom: 72px; }
+.porch-text .eyebrow { color: var(--brass-ink); margin: 0 0 18px; }
+h1 { font-size: clamp(42px, 6.6vw, 76px); line-height: 1; letter-spacing: -.015em; margin-bottom: 22px; }
+.lede { font-size: 19px; color: var(--muted); max-width: 33em; margin: 0 0 30px; text-wrap: pretty; }
+.lede strong { color: var(--ink); font-weight: 600; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1.5px solid var(--ink); transition: transform .15s ease; }
+.btn.primary { background: var(--door); border-color: var(--door); color: #F4F1EA; }
+.btn:hover { transform: translateY(-1px); }
+
+.entrance { position: relative; justify-self: center; width: 280px; max-width: 100%; }
+.sconce { position: absolute; left: -46px; top: 120px; width: 22px; height: 40px; border-radius: 6px 6px 10px 10px; background: var(--brass); box-shadow: 0 0 40px 18px var(--glow); }
+.sconce::before { content: ""; position: absolute; left: 50%; top: -10px; width: 4px; height: 10px; margin-left: -2px; background: var(--brass-ink); }
+.doorway { position: relative; height: 430px; border: 14px solid var(--paper); border-bottom: 0; border-radius: 6px 6px 0 0; perspective: 1100px; background: linear-gradient(180deg, #FFE2A8, #F2B866 60%, #C98A3E); box-shadow: inset 0 0 60px rgba(120,70,10,.35); }
+.doorway .inside { position: absolute; inset: auto 0 0 0; height: 44%; background: repeating-linear-gradient(90deg, #A87A4E 0 36px, #946A42 36px 38px); }
+.doorway .inside::before { content: ""; position: absolute; left: 30%; bottom: 100%; width: 40%; height: 70px; border: 5px solid #6B4A2C; background: #E9D3A8; transform: translateY(-40px); }
+.door {
+  position: absolute; inset: 0; transform-origin: left center; transform: rotateY(var(--open, -8deg));
+  background: var(--door); border-radius: 2px; box-shadow: 6px 0 18px rgba(0,0,0,.25);
+  display: grid; grid-template-rows: auto 1fr 1fr; gap: 14px; padding: 22px 22px 26px;
+  transition: transform .08s linear; will-change: transform;
+}
+.door .window { justify-self: center; width: 116px; height: 116px; border-radius: 50%; overflow: hidden; border: 6px solid var(--brass); box-shadow: inset 0 0 0 3px rgba(0,0,0,.2); background: #E9E4DC; }
+.door .window img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.door .panel { border: 3px solid var(--door-dark); border-radius: 3px; box-shadow: inset 0 0 0 6px rgba(255,255,255,.04); }
+.door .knob { position: absolute; right: 22px; top: 56%; width: 16px; height: 16px; border-radius: 50%; background: var(--brass); box-shadow: 0 2px 3px rgba(0,0,0,.35); }
+.door .number { position: absolute; left: 50%; top: 150px; transform: translateX(-50%); font-family: var(--font-display); color: var(--brass); font-size: 22px; }
+.nameplate { position: absolute; right: -150px; top: 130px; width: 132px; padding: 10px 12px; text-align: center; background: var(--brass); color: #2B1E07; border-radius: 4px; box-shadow: 0 3px 8px rgba(0,0,0,.2); line-height: 1.3; }
+.nameplate b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 15px; }
+.nameplate span { font-family: var(--font-mono); font-size: 10.5px; }
+.steps { position: relative; height: 34px; margin-inline: -20px; background: #848D98; }
+.steps::before { content: ""; position: absolute; inset: 0 10px auto; height: 16px; background: #A9B1BA; }
+@media (max-width: 900px) {
+  .porch-grid { grid-template-columns: 1fr; padding-block: 92px 0; gap: 8px; }
+  .porch-text { padding-bottom: 40px; }
+  .entrance { width: 230px; justify-self: start; margin-left: 40px; }
+  .doorway { height: 360px; }
+  .nameplate { right: -140px; width: 120px; }
+}
+@media (max-width: 420px) { .nameplate { display: none; } .entrance { margin-left: 46px; } }
+
+/* ---------- 2. Hallway ---------- */
+#hallway { background: var(--wall-hall); }
+.hall-grid { display: grid; gap: 0; }
+.room-top { margin-bottom: 44px; }
+.room-top .room-head { margin-bottom: 0; }
+.hall-text { min-width: 0; }
+.hall-text p { margin: 0 0 16px; font-size: 17px; max-width: 62ch; }
+.frames { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.frame-sm { background: var(--paper); border: 6px solid var(--ink); padding: 14px 12px; text-align: center; box-shadow: 0 8px 16px rgba(0,0,0,.1); }
+.frame-sm:nth-child(even) { transform: rotate(1.2deg); }
+.frame-sm:nth-child(odd) { transform: rotate(-.8deg); }
+.frame-sm b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 30px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.frame-sm span { font-size: 13px; color: var(--muted); line-height: 1.35; display: block; margin-top: 4px; }
+@media (max-width: 860px) {
+  .frames { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- 3. Study ---------- */
+#study { background: var(--wall-study); }
+.whiteboard { background: #FCFCFA; color: #1C2333; border: 10px solid #C9CDD3; border-radius: 6px; padding: 22px 22px 18px; box-shadow: 0 12px 28px rgba(0,0,0,.12); margin-bottom: 44px; }
+.whiteboard .mono { color: #5A6274; }
+.flow { display: flex; align-items: stretch; gap: 8px; overflow-x: auto; padding: 14px 2px 6px; }
+.step { flex: 1 0 128px; border: 2px solid #2E4A7A; border-radius: 10px; padding: 10px 12px; font-family: var(--font-mono); font-size: 12px; color: #2E4A7A; line-height: 1.4; background: #FCFCFA; }
+.step b { display: block; font-family: var(--font-body); font-size: 14px; color: #1C2333; }
+.step.hot { border-color: #B8862F; color: #855E14; }
+.arrow { flex: 0 0 auto; align-self: center; color: #8C3B3B; font-family: var(--font-mono); font-size: 18px; }
+.folders { display: grid; gap: 26px; }
+.folder { position: relative; padding-top: 30px; }
+.folder .tab { position: absolute; top: 0; left: 0; height: 32px; padding: 6px 16px; border-radius: 10px 10px 0 0; background: #E8C98A; color: #4A3712; font-family: var(--font-mono); font-size: 12px; display: flex; gap: 10px; align-items: center; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.folder .sheet { background: var(--paper); border-top: 6px solid #E8C98A; border-radius: 0 10px 10px 10px; padding: 22px 24px; box-shadow: 0 8px 20px rgba(0,0,0,.07); }
+.folder h3 { margin-bottom: 12px; }
+.folder ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; color: var(--muted); }
+.folder li::marker { color: var(--brass); }
+.folder li strong { color: var(--ink); font-weight: 600; }
+.now { display: inline-block; margin-left: 8px; vertical-align: middle; font-family: var(--font-mono); font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--brass-soft); color: var(--brass-ink); }
+
+/* ---------- 4. Workshop ---------- */
+#workshop { background: radial-gradient(circle, var(--peg) 2px, transparent 2.5px) 0 0 / 24px 24px, var(--wall-shop); }
+.bench { display: grid; grid-template-columns: 1.45fr 1fr; gap: 28px; align-items: start; }
+.sheet-card { position: relative; background: var(--paper); padding: 30px 26px 26px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 12px 26px rgba(0,0,0,.12); min-width: 0; }
+.sheet-card:nth-child(1) { transform: rotate(-.6deg); }
+.sheet-card:nth-child(2) { transform: rotate(.8deg); }
+.sheet-card::before, .sheet-card::after { content: ""; position: absolute; top: -10px; width: 74px; height: 22px; background: rgba(232,201,138,.75); }
+.sheet-card::before { left: 18px; transform: rotate(-6deg); }
+.sheet-card::after { right: 18px; transform: rotate(5deg); }
+.card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.card-top .mono { color: var(--brass-ink); }
+.sheet-card p { margin: 0; color: var(--muted); }
+.sheet-card ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--muted); font-size: 15px; }
+.sheet-card li::marker { color: var(--brass); }
+.sheet-card li strong { color: var(--ink); font-weight: 600; }
+.gauge { display: grid; gap: 8px; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 8px; }
+.gauge-row { display: grid; grid-template-columns: 84px 1fr 34px; align-items: center; gap: 10px; }
+.gauge-row .mono { color: var(--muted); font-size: 11.5px; }
+.bar { height: 8px; border-radius: 99px; background: var(--line); position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; border-radius: 99px; }
+.bar.from i { width: 44%; background: var(--muted); opacity: .6; }
+.bar.to i { width: 92%; background: var(--brass); }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.tools span { position: relative; font-family: var(--font-mono); font-size: 12px; padding: 4px 10px 4px 20px; border-radius: 3px 999px 999px 3px; background: var(--brass-soft); color: var(--brass-ink); }
+.tools span::before { content: ""; position: absolute; left: 7px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--paper); }
+.sheet-card a.link { font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--brass); align-self: flex-start; }
+@media (max-width: 860px) { .bench { grid-template-columns: 1fr; } }
+
+/* ---------- 5. Library ---------- */
+#library { background: var(--wall-lib); }
+.bookcase { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 40px; }
+.shelf { min-width: 0; }
+.books { display: flex; align-items: flex-end; gap: 4px; flex-wrap: wrap; min-height: 196px; padding-inline: 8px; border-bottom: 14px solid var(--shelf); box-shadow: 0 10px 12px -8px rgba(0,0,0,.35); }
+.book {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  width: 42px; padding: 12px 0; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; color: #F6F1E7; border-radius: 3px 3px 2px 2px;
+  background: var(--b1); box-shadow: inset -4px 0 0 rgba(0,0,0,.15), inset 0 10px 0 -6px rgba(255,255,255,.25);
+  white-space: nowrap; transition: transform .2s ease;
+}
+.book:hover { transform: rotate(180deg) translateY(8px); }
+.book:nth-child(6n+1) { background: var(--b1); height: 178px; }
+.book:nth-child(6n+2) { background: var(--b2); height: 160px; }
+.book:nth-child(6n+3) { background: var(--b3); height: 186px; width: 46px; }
+.book:nth-child(6n+4) { background: var(--b4); height: 152px; color: #2B1E07; }
+.book:nth-child(6n+5) { background: var(--b5); height: 172px; width: 40px; }
+.book:nth-child(6n+6) { background: var(--b6); height: 164px; }
+.label { display: inline-block; margin-top: 12px; padding: 3px 10px; background: var(--brass); color: #2B1E07; border-radius: 3px; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; }
+.certs-head { margin: 56px 0 16px; color: var(--muted); }
+.certs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.certs li { background: var(--paper); border-left: 10px solid var(--b3); border-radius: 3px; padding: 14px 16px; box-shadow: 0 6px 14px rgba(0,0,0,.07); }
+.certs li:nth-child(2) { border-left-color: var(--b2); }
+.certs li:nth-child(3) { border-left-color: var(--b1); }
+.certs li:nth-child(4) { border-left-color: var(--b5); }
+.certs li:nth-child(5) { border-left-color: var(--b4); }
+.certs b { display: block; font-weight: 600; font-size: 15px; line-height: 1.35; }
+.certs span { color: var(--muted); font-size: 13.5px; }
+@media (max-width: 860px) { .bookcase { grid-template-columns: 1fr; } }
+
+/* ---------- 6. Trophy room ---------- */
+#trophy { background: var(--wall-trophy); }
+.cabinet { max-width: 360px; display: grid; grid-template-columns: 1fr; gap: 24px; padding: 28px 24px 0; border: 12px solid var(--shelf); border-bottom-width: 18px; background: rgba(255,255,255,.18); }
+.trophy { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding-bottom: 20px; }
+.trophy svg { width: 84px; height: 96px; }
+.trophy .rank { font-family: var(--font-display); font-size: 28px; line-height: 1.05; color: var(--brass-ink); }
+.trophy b { font-weight: 600; }
+.trophy span { color: var(--muted); font-size: 14px; }
+.diplomas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+.diploma { background: var(--paper); border: 8px solid #2A2F3A; outline: 1px solid var(--brass); outline-offset: -16px; padding: 26px 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,.1); display: grid; gap: 6px; align-content: start; }
+.diploma b { font-family: var(--font-display); font-weight: 400; font-size: 19px; line-height: 1.25; }
+.diploma span { color: var(--muted); font-size: 14px; }
+.diploma .mono { color: var(--brass-ink); }
+@media (max-width: 860px) { .cabinet, .diplomas { grid-template-columns: 1fr; } .cabinet { padding-top: 20px; } }
+
+/* ---------- 7. Garden (contact), single dusk look ---------- */
+#garden { background: linear-gradient(180deg, #1D2647 0%, #3B3F6B 45%, #B9687A 82%, #E39A72 100%); color: #F6F0E8; }
+#garden .sign { color: #F3C97A; }
+#garden .sign .plate { border-color: #F3C97A; background: rgba(243,201,122,.12); }
+#garden .room-head p { color: rgba(246,240,232,.78); }
+#garden::after { display: none; }
+.stars { position: absolute; inset: 0 0 50% 0; z-index: 0; background-image: radial-gradient(1.5px 1.5px at 12% 20%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 32% 8%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 58% 26%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 76% 12%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 90% 30%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 46% 40%, #fff 50%, transparent 51%); opacity: .7; }
+.garden-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: end; }
+.mailbox { display: flex; gap: 22px; align-items: flex-end; flex-wrap: wrap; }
+.mailbox svg { width: 110px; height: 150px; flex: 0 0 auto; }
+.mail-note { min-width: 0; flex: 1 1 240px; background: #FBF7EF; color: #1C2333; padding: 18px 20px; border-radius: 4px; box-shadow: 0 12px 24px rgba(0,0,0,.25); transform: rotate(-1deg); }
+.mail-note .mono { color: #855E14; }
+.mail-note code { display: block; margin: 6px 0 12px; font-family: var(--font-mono); font-size: 15px; word-break: break-all; user-select: all; }
+.copy { font: 600 13px var(--font-body); padding: 7px 14px; border-radius: 999px; border: 1.5px solid #1C2333; background: transparent; color: #1C2333; cursor: pointer; }
+.copy:hover { background: rgba(28,35,51,.08); }
+.posts { list-style: none; margin: 0; padding: 0 0 0 26px; display: grid; gap: 14px; position: relative; }
+.posts::before { content: ""; position: absolute; left: 10px; top: -20px; bottom: -40px; width: 10px; background: #6B4A30; border-radius: 3px; }
+.posts a { position: relative; display: flex; justify-content: space-between; gap: 12px; padding: 12px 34px 12px 16px; background: #C8955E; color: #2B1A0A; text-decoration: none; font-weight: 700; clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%); transition: transform .15s ease; }
+.posts li:nth-child(2) a { background: #B7834F; margin-left: 10px; }
+.posts li:nth-child(3) a { background: #D1A46F; }
+.posts a:hover { transform: translateX(6px); }
+.posts a span { font-family: var(--font-mono); font-size: 12px; font-weight: 400; }
+.grass { position: relative; z-index: 1; height: 70px; background: linear-gradient(180deg, transparent 0 20px, #24412F 20px), radial-gradient(circle at 10px 26px, #2E5239 14px, transparent 15px) 0 0 / 36px 40px repeat-x; }
+footer { background: #24412F; color: rgba(246,240,232,.7); }
+footer .wrap { padding-block: 0 28px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 860px) { .garden-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Floor plan + room chip ---------- */
+.plan { position: fixed; z-index: 6; right: max(20px, env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%); width: 168px; padding: 12px 12px 10px; background: color-mix(in srgb, #1E3A5F 92%, transparent); color: #DCE8F5; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.plan svg { display: block; width: 100%; height: auto; }
+.plan .mono { font-size: 10.5px; display: flex; justify-content: space-between; margin-bottom: 8px; color: #A9C2DE; }
+.plan rect.rm { fill: transparent; stroke: #9FBCE0; stroke-width: 1.2; transition: fill .3s ease; }
+.plan a:hover rect.rm { fill: rgba(159,188,224,.18); }
+.plan a.on rect.rm { fill: rgba(243,201,122,.32); stroke: #F3C97A; }
+.plan text { fill: #DCE8F5; font-family: var(--font-mono); font-size: 7px; pointer-events: none; }
+.plan .you { fill: #F3C97A; transition: transform .5s ease; }
+.chip { display: none; }
+@media (max-width: 1179px) {
+  .plan { display: none; }
+  .chip {
+    display: flex; position: fixed; z-index: 6; left: 50%; transform: translateX(-50%);
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    align-items: center; gap: 4px; padding: 6px 6px 6px 16px; border-radius: 999px;
+    background: #1E3A5F; color: #DCE8F5; box-shadow: 0 10px 24px rgba(0,0,0,.3); white-space: nowrap;
+  }
+  .chip .where { font-family: var(--font-mono); font-size: 12px; }
+  .chip .where b { color: #F3C97A; font-weight: 500; }
+  .chip a { margin-left: 8px; padding: 6px 12px; border-radius: 999px; background: #F3C97A; color: #2B1E07; text-decoration: none; font-weight: 700; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .door, .room::after, .book, .mat, .btn, .posts a { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Floor plan (desktop) -->
+<nav class="plan" aria-label="Floor plan">
+  <div class="mono"><span>FLOOR PLAN</span><span>1:100</span></div>
+  <svg viewBox="0 0 120 196" role="img" aria-label="Floor plan of the rooms">
+    <a href="#garden" data-room="garden"><rect class="rm" x="2" y="2" width="116" height="28" stroke-dasharray="3 2"/><text x="60" y="19" text-anchor="middle">GARDEN</text></a>
+    <a href="#library" data-room="library"><rect class="rm" x="2" y="32" width="58" height="44"/><text x="31" y="57" text-anchor="middle">LIBRARY</text></a>
+    <a href="#trophy" data-room="trophy"><rect class="rm" x="60" y="32" width="58" height="44"/><text x="89" y="57" text-anchor="middle">TROPHIES</text></a>
+    <a href="#workshop" data-room="workshop"><rect class="rm" x="2" y="76" width="50" height="46"/><text x="27" y="102" text-anchor="middle">WORKSHOP</text></a>
+    <a href="#study" data-room="study"><rect class="rm" x="52" y="76" width="66" height="46"/><text x="85" y="102" text-anchor="middle">STUDY</text></a>
+    <a href="#hallway" data-room="hallway"><rect class="rm" x="2" y="122" width="116" height="38"/><text x="60" y="144" text-anchor="middle">HALLWAY</text></a>
+    <a href="#porch" data-room="porch"><rect class="rm" x="34" y="162" width="52" height="30"/><text x="60" y="180" text-anchor="middle">PORCH</text></a>
+    <circle class="you" cx="0" cy="0" r="3.2" id="you" style="transform: translate(60px,186px)"/>
+  </svg>
+</nav>
+
+<!-- Room chip (phones / tablets) -->
+<div class="chip" aria-live="polite"><span class="where">You're in <b id="chip-room">the porch</b></span><a id="chip-next" href="#hallway">Next ↓</a></div>
+
+<!-- 1. Porch -->
+<header class="room lit" id="porch" data-name="the porch" data-next="hallway">
+  <div class="wrap porch-grid">
+    <div class="porch-text">
+      <p class="eyebrow mono">No. 04 · Hyderabad, India · welcome</p>
+      <h1>Yashwanth Reddy Avula</h1>
+      <p class="lede">I'm a software engineer with <strong>4 years in banking technology</strong>, building event-driven systems and production AI on <strong>Gemini and Claude</strong>. I studied at IIT Madras and founded <strong>ApplyFlow AI</strong>. Come on in and have a look around.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#hallway">Step inside ↓</a>
+        <a class="btn" href="#garden">Ring the bell</a>
+      </div>
+    </div>
+    <div class="entrance" aria-hidden="true">
+      <span class="sconce"></span>
+      <div class="nameplate"><b>Y. R. Avula</b><span>Software Engineer</span></div>
+      <div class="doorway">
+        <div class="inside"></div>
+        <div class="door" id="door">
+          <div class="window"><img src="assets/yashwanth.jpg" alt="" width="640" height="640"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <span class="knob"></span>
+        </div>
+      </div>
+      <div class="steps"></div>
+    </div>
+  </div>
+  <div class="floor" style="background: #8D949C; height: 64px;"><a class="mat" href="#hallway"><span class="mono">WELCOME · step inside ↓</span></a></div>
+</header>
+
+<!-- 2. Hallway / About -->
+<section class="room" id="hallway" data-name="the hallway" data-next="study">
+  <div class="wrap room-body">
+    <div class="room-head">
+      <div class="sign mono"><span class="plate">Room 01</span>About me</div>
+      <h2>The Hallway</h2>
+    </div>
+    <div class="hall-grid">
+      <div class="hall-text">
+        <p>I like systems that take messy input, like customer emails, scanned PDFs or job portals, and turn it into clean, reliable output. At work I build that kind of system for banking operations, combining event-driven backends with AI.</p>
+        <p>Outside work I'm building ApplyFlow AI. It's a web app and Chrome extension that tailors résumés and autofills applications across 20+ applicant tracking systems.</p>
+        <p>I have a B.Tech in Mechanical Engineering with a minor in Computer Science from IIT Madras. That background shows in how I work: I start from first principles and measure everything.</p>
+        <div class="frames">
+          <div class="frame-sm"><b>4 yrs</b><span>professional experience</span></div>
+          <div class="frame-sm"><b>20+</b><span>job portals ApplyFlow autofills</span></div>
+          <div class="frame-sm"><b>IIT</b><span>Madras graduate</span></div>
+          <div class="frame-sm"><b>5</b><span>certifications</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="floor"><a class="mat" href="#study"><span class="mono">next room · The Study ↓</span></a></div>
+</section>
+
+<!-- 3. Study / Experience -->
+<section class="room" id="study" data-name="the study" data-next="workshop">
+  <div class="wrap room-body">
+    <div class="room-top">
+      <div class="room-head">
+        <div class="sign mono"><span class="plate">Room 02</span>Experience · 2021 → now</div>
+        <h2>The Study</h2>
+        <p>This is where the day job happens. The whiteboard shows the kind of AI pipeline I build, and the folders below hold every role I've had.</p>
+      </div>
+    </div>
+    <div class="whiteboard">
+      <span class="mono">// how an AI email pipeline works, step by step</span>
+      <div class="flow">
+        <div class="step"><b>Inbox</b>emails + attachments</div><span class="arrow">→</span>
+        <div class="step"><b>Kafka</b>event queue</div><span class="arrow">→</span>
+        <div class="step hot"><b>OCR + LLM</b>classify · extract</div><span class="arrow">→</span>
+        <div class="step"><b>Draft reply</b>urgency · sentiment</div><span class="arrow">→</span>
+        <div class="step"><b>Workflow</b>hand off to the team</div>
+      </div>
+    </div>
+    <div class="folders">
+      <article class="folder">
+        <div class="tab">Citi · Jan 2024 – Present</div>
+        <div class="sheet">
+          <h3>Software Development Engineer II <span class="now">current</span></h3>
+          <ul>
+            <li>Build <strong>AI services</strong> that read incoming emails and documents, work out what needs to happen and pull out the key details, so operations teams no longer sort them by hand.</li>
+            <li>Design <strong>event-driven pipelines</strong> on Kafka that handle high volumes of requests reliably.</li>
+            <li>Develop <strong>multi-step LLM workflows</strong> for classification, data extraction, OCR and drafting replies.</li>
+            <li>Built a <strong>document translation</strong> system for PDF, Word, Excel, email and image files that keeps the original layout.</li>
+            <li>Work with product, operations and architecture teams on requirements and technical design.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="folder">
+        <div class="tab">Citi · Jul 2022 – Dec 2023</div>
+        <div class="sheet">
+          <h3>Software Development Engineer I</h3>
+          <ul>
+            <li>Built and shipped <strong>Java and Spring Boot microservices</strong> with strong test coverage through CI/CD pipelines to the cloud.</li>
+            <li>Automated <strong>payment processing</strong> by extracting data from PDFs, making it faster and more accurate.</li>
+            <li>Built a configurable <strong>workflow engine</strong> that routes requests automatically using business rules.</li>
+            <li>Added <strong>biometric identity verification</strong> to digital customer onboarding.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="folder">
+        <div class="tab">Connected Digital Systems · Jun – Jul 2021</div>
+        <div class="sheet">
+          <h3>Software Intern</h3>
+          <ul>
+            <li>Built a full-stack education-loan application platform for Credit Hive Technologies (Dubai). It cut manual processing by <strong>~50%</strong> for 1K+ applicants.</li>
+            <li>Gathered requirements directly with the client and turned them into responsive HTML, Bootstrap and JavaScript interfaces with backend workflows.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="folder">
+        <div class="tab">MEA Club, IIT Madras · Jan – Mar 2021</div>
+        <div class="sheet">
+          <h3>Software Developer</h3>
+          <ul>
+            <li>Built a WordPress e-learning platform hosting <strong>10+ courses</strong>, and improved course delivery on the club's existing Moodle platform.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="floor"><a class="mat" href="#workshop"><span class="mono">next room · The Workshop ↓</span></a></div>
+</section>
+
+<!-- 4. Workshop / Projects -->
+<section class="room" id="workshop" data-name="the workshop" data-next="library">
+  <div class="wrap room-body">
+    <div class="room-top">
+      <div class="room-head">
+        <div class="sign mono"><span class="plate">Room 03</span>Projects</div>
+        <h2>The Workshop</h2>
+        <p>These are the things I build after hours. They're pinned to the pegboard, along with the tools I used to make them.</p>
+      </div>
+    </div>
+    <div class="bench">
+      <article class="sheet-card">
+        <div class="card-top"><h3>ApplyFlow AI</h3><span class="mono">Founder · live</span></div>
+        <p>A full-stack AI platform for job applications, with a web app and a Chrome extension published on the Chrome Web Store.</p>
+        <ul>
+          <li>Claude-powered autofill for <strong>20+ ATS portals</strong> (Greenhouse, Workday, Lever, Naukri, iCIMS) in <strong>under 2 seconds</strong>.</li>
+          <li>Résumé tailoring that rewrites bullets to match each job description.</li>
+          <li>Real-time job match scoring on LinkedIn, with auth kept in sync between the extension and the web app.</li>
+          <li>FastAPI backend with async PostgreSQL (Supabase), SQLAlchemy, Alembic and JWT auth with email verification.</li>
+        </ul>
+        <div class="gauge" aria-label="Typical ATS score before and after tailoring">
+          <div class="gauge-row"><span class="mono">ATS before</span><div class="bar from"><i></i></div><span class="mono">40s</span></div>
+          <div class="gauge-row"><span class="mono">ATS after</span><div class="bar to"><i></i></div><span class="mono">90s</span></div>
+        </div>
+        <div class="tools"><span>FastAPI</span><span>PostgreSQL</span><span>Claude</span><span>React</span><span>Vite</span><span>Manifest V3</span></div>
+        <a class="link" href="https://www.applyflow.in/" target="_blank" rel="noopener">Visit applyflow.in ↗</a>
+      </article>
+      <article class="sheet-card">
+        <div class="card-top"><h3>TaskManager</h3><span class="mono">Full-stack</span></div>
+        <p>A task management app built around a type-safe dynamic query engine.</p>
+        <ul>
+          <li>Runtime query composition with JPA Specifications. It combines up to <strong>5 filters</strong> (user, category, status, priority and date range) into one query, followed by sorting and pagination.</li>
+          <li>Stateless auth with Spring Security and JWT, with no server-side sessions.</li>
+          <li>A single React form component handles both creating and editing tasks.</li>
+        </ul>
+        <div class="tools"><span>Java</span><span>Spring Boot</span><span>JPA</span><span>React</span><span>JWT</span></div>
+        <a class="link" href="https://github.com/yash541" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+    </div>
+  </div>
+  <div class="floor"><a class="mat" href="#library"><span class="mono">next room · The Library ↓</span></a></div>
+</section>
+
+<!-- 5. Library / Skills + certifications -->
+<section class="room" id="library" data-name="the library" data-next="trophy">
+  <div class="wrap room-body">
+    <div class="room-top">
+      <div class="room-head">
+        <div class="sign mono"><span class="plate">Room 04</span>Skills &amp; certifications</div>
+        <h2>The Library</h2>
+        <p>Each shelf holds one area of skills, and every book is something I use at work.</p>
+      </div>
+    </div>
+    <div class="bookcase">
+      <div class="shelf"><div class="books"><span class="book">Python</span><span class="book">Java</span><span class="book">JavaScript</span><span class="book">TypeScript</span></div><span class="label">Languages</span></div>
+      <div class="shelf"><div class="books"><span class="book">FastAPI</span><span class="book">Spring Boot</span><span class="book">React</span><span class="book">Angular</span><span class="book">Flask</span></div><span class="label">Frameworks</span></div>
+      <div class="shelf"><div class="books"><span class="book">Gemini</span><span class="book">Claude</span><span class="book">OCR</span><span class="book">Prompt engineering</span><span class="book">LLM applications</span></div><span class="label">AI &amp; data</span></div>
+      <div class="shelf"><div class="books"><span class="book">PostgreSQL</span><span class="book">Oracle DB</span><span class="book">MySQL</span><span class="book">SQL</span></div><span class="label">Databases</span></div>
+      <div class="shelf"><div class="books"><span class="book">AWS</span><span class="book">ECS</span><span class="book">PCF</span><span class="book">Docker</span><span class="book">CI/CD</span><span class="book">Harness</span><span class="book">Splunk</span></div><span class="label">Cloud &amp; DevOps</span></div>
+      <div class="shelf"><div class="books"><span class="book">Microservices</span><span class="book">Distributed systems</span><span class="book">System design</span><span class="book">OOP</span><span class="book">JWT auth</span></div><span class="label">Concepts</span></div>
+    </div>
+    <p class="certs-head mono">// on the reading table: certifications</p>
+    <ul class="certs">
+      <li><b>Foundry &amp; AIP Builder Foundations</b><span>Palantir Technologies</span></li>
+      <li><b>Machine Learning</b><span>Stanford · Andrew Ng</span></li>
+      <li><b>Python for Data Science &amp; ML Bootcamp</b><span>Udemy</span></li>
+      <li><b>Databases &amp; SQL Querying</b><span>Udemy</span></li>
+      <li><b>Programming &amp; Data Structures</b><span>NPTEL</span></li>
+    </ul>
+  </div>
+  <div class="floor"><a class="mat" href="#trophy"><span class="mono">next room · The Trophy Room ↓</span></a></div>
+</section>
+
+<!-- 6. Trophy room / Education + achievements -->
+<section class="room" id="trophy" data-name="the trophy room" data-next="garden">
+  <div class="wrap room-body">
+    <div class="room-top">
+      <div class="room-head">
+        <div class="sign mono"><span class="plate">Room 05</span>Education &amp; achievements</div>
+        <h2>The Trophy Room</h2>
+        <p>The cabinet holds my scholarship, and my diplomas hang on the wall.</p>
+      </div>
+    </div>
+    <div class="cabinet">
+      <div class="trophy">
+        <svg viewBox="0 0 84 96" aria-hidden="true"><circle cx="42" cy="36" r="24" fill="#D9A54A"/><circle cx="42" cy="36" r="16" fill="none" stroke="#B8862F" stroke-width="3"/><path d="M30 56l-6 26 12-6 6 10 6-30zM54 56l6 26-12-6-6 10" fill="#8C3B3B"/></svg>
+        <span class="rank">Scholar</span><b>Merit-cum-Means Scholarship</b><span>Government of India</span>
+      </div>
+    </div>
+    <div class="diplomas">
+      <div class="diploma"><span class="mono">2018 – 2022</span><b>IIT Madras</b><span>B.Tech, Mechanical Engineering · Minor in Computer Science · CGPA 7.34</span></div>
+      <div class="diploma"><span class="mono">2016 – 2018</span><b>Narayana Junior College</b><span>Mathematics, Physics &amp; Chemistry · 94.9%</span></div>
+      <div class="diploma"><span class="mono">2016</span><b>City Central School</b><span>Telangana State Board · 97%</span></div>
+    </div>
+  </div>
+  <div class="floor"><a class="mat" href="#garden"><span class="mono">out the back door · The Garden ↓</span></a></div>
+</section>
+
+<!-- 7. Garden / Contact -->
+<section class="room" id="garden" data-name="the garden" data-next="">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap room-body">
+    <div class="room-top">
+      <div class="room-head">
+        <div class="sign mono"><span class="plate">Outside</span>Contact</div>
+        <h2>The Garden</h2>
+        <p>Thanks for walking through. If you'd like to talk about backend, distributed systems or applied AI roles, or about ApplyFlow AI, leave a note in the mailbox.</p>
+      </div>
+    </div>
+    <div class="garden-grid">
+      <div class="mailbox">
+        <svg viewBox="0 0 110 150" aria-hidden="true">
+          <rect x="49" y="64" width="12" height="86" fill="#6B4A30"/>
+          <path d="M10 30a26 26 0 0 1 52 0v40H10z" fill="#1F5A57"/>
+          <path d="M36 4h40a26 26 0 0 1 26 26v40H62V30A26 26 0 0 0 36 4z" fill="#17443F"/>
+          <rect x="86" y="16" width="5" height="34" fill="#C2453B"/><rect x="86" y="16" width="18" height="12" fill="#C2453B"/>
+          <rect x="18" y="40" width="36" height="22" rx="2" fill="#F3C97A" opacity=".9"/>
+        </svg>
+        <div class="mail-note">
+          <span class="mono">// email me at</span>
+          <code id="email">avulayashwanth64@gmail.com</code>
+          <button class="copy" id="copy-email" type="button">Copy email</button>
+        </div>
+      </div>
+      <ul class="posts">
+        <li><a href="https://www.linkedin.com/in/yashwanthreddyavula/" target="_blank" rel="noopener">LinkedIn <span>/in/yashwanthreddyavula ↗</span></a></li>
+        <li><a href="https://github.com/yash541" target="_blank" rel="noopener">GitHub <span>@yash541 ↗</span></a></li>
+        <li><a href="https://www.applyflow.in/" target="_blank" rel="noopener">ApplyFlow AI <span>applyflow.in ↗</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="grass" aria-hidden="true"></div>
+</section>
+<footer><div class="wrap mono"><span>© 2026 Yashwanth Reddy Avula</span><a href="#porch" style="text-decoration:none">back to the front door ↑</a></div></footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Front door swings open as you scroll off the porch.
+  var door = document.getElementById('door');
+  function swing() {
+    var p = Math.min(1, window.scrollY / 420);
+    door.style.setProperty('--open', (-8 - p * 80) + 'deg');
+  }
+  if (!reduce) { window.addEventListener('scroll', swing, { passive: true }); swing(); }
+  else { door.style.setProperty('--open', '-35deg'); }
+
+  // Track which room you're in: lights on, floor plan dot, mobile chip.
+  var rooms = Array.prototype.slice.call(document.querySelectorAll('.room'));
+  var links = document.querySelectorAll('.plan a[data-room]');
+  var you = document.getElementById('you');
+  var chipRoom = document.getElementById('chip-room');
+  var chipNext = document.getElementById('chip-next');
+  var spots = { porch: [60,186], hallway: [60,152], study: [85,112], workshop: [27,112], library: [31,66], trophy: [89,66], garden: [60,24] };
+  var titles = { hallway: 'The Hallway', study: 'The Study', workshop: 'The Workshop', library: 'The Library', trophy: 'Trophy Room', garden: 'The Garden' };
+
+  function enter(room) {
+    room.classList.add('lit');
+    var id = room.id;
+    links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-room') === id); });
+    var s = spots[id]; if (s) you.style.transform = 'translate(' + s[0] + 'px,' + s[1] + 'px)';
+    chipRoom.textContent = room.getAttribute('data-name');
+    var next = room.getAttribute('data-next');
+    if (next) { chipNext.hidden = false; chipNext.href = '#' + next; chipNext.textContent = titles[next].replace('The ', '') + ' ↓'; }
+    else { chipNext.hidden = false; chipNext.href = '#porch'; chipNext.textContent = 'Front door ↑'; }
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) enter(e.target); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    rooms.forEach(function (r) { io.observe(r); });
+  } else { rooms.forEach(function (r) { r.classList.add('lit'); }); }
+  enter(rooms[0]);
+
+  // Copy email
+  document.getElementById('copy-email').addEventListener('click', function () {
+    var btn = this, el = document.getElementById('email');
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); }
+    function select() { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+    try { navigator.clipboard.writeText(el.textContent).then(function () { done('Copied'); }, select); } catch (e) { select(); }
+  });
+})();
+</script>
+</body>
+</html>
